@@ -21,7 +21,9 @@ const UseClick = () => {
     console.log('Hi!');
   };
   const input = useRef();
-  setTimeout(() => input.current.focus(), 3000);
+  useEffect(() => {
+    setTimeout(() => input.current.focus(), 3000);
+  });
   const title = useClick(sayHello);
   return (
     <div>
